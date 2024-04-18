@@ -10,34 +10,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar Section -->
-    <nav class="navbar">
-        <div class="navbar__container">
-            <a href="index.html" id="navbar__logo">Shop Name</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="index.html" class="navbar__links">
-                        Shop
-                    </a>
-                </li>
-                <li class="navbar__item">
-                    <a href="about.html" class="navbar__links">
-                        About
-                    </a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="cart.html" class="button">
-                        Cart
-                    </a>
-                </li>
-            </ul>
+<!-- Navbar Section -->
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="index.html" id="navbar__logo">Shop Name</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-    </nav>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="index.html" class="navbar__links">
+                    Shop
+                </a>
+            </li>
+            <li class="navbar__item">
+                <a href="about.html" class="navbar__links">
+                    About
+                </a>
+            </li>
+            <li class="navbar__btn">
+                <a href="cart.html" class="button" id="cart-btn">
+                    Cart
+                </a>
+                <div id="cart-content">
+                    <!-- Cart content here -->
+                    <h1>CART</h1>
+                    <p>Your cart is empty</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 
     <!--Hero Section-->
     <div class="main" id="home">
