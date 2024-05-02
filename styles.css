@@ -342,6 +342,8 @@
     position: relative;
     transition: all 0.35s;
     outline: none;
+    text-decoration: none;
+    z-index: 2;
 }
 
 .main__btn a {
@@ -358,9 +360,11 @@
     width: 0;
     left: 0;
     height: 100%;
+    color: #fff;
     background: #cc3333;
     transition: all 0.35s;
     border-radius: 4px;
+    z-index: -1;
 }
 
 .main__btn:hover {
