@@ -655,3 +655,52 @@
         width: 100%;
     }
 }
+
+/* About CSS */
+
+.about__container {
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.about__card {
+    margin: 1rem;
+    margin-top: 40px;
+    height: 400px;
+    width: 500px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17, 17,
+    17, 0.6) 1000%), url('laptop_build.webp');
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+.about__container p {
+    max-width: 700px;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-size: 1.1rem;
+}
+
+.about__container h1 {
+    margin-top: 35px;
+    font-size: 2.5rem;
+ 
+}
+
+@media screen and (max-width: 1266px) {
+    .about__container{
+        height: 140vh;
+    }
+}
