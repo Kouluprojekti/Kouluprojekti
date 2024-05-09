@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Name</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -103,26 +104,13 @@
     <!-- Footer Section -->
 
     <div class="footer__container">
-        <div class="footer__links">
-            <div class="footer__link--wrapper">
-                <div class="footer__link--items">
-                    <h2>About Us</h2>
-                    <a href="/">Test</a>
-                    <a href="/">Test</a>
-                    <a href="/">Test</a>
-                </div>
-            </div>
-            <div class="footer__link--wrapper">
-                <div class="footer__link--items">
-                    <h2>Social Media</h2>
-                    <a href="/">Test</a>
-                    <a href="/">Test</a>
-                    <a href="/">Test</a>
-                </div>
-            </div>
-        </div>
+        
         <div class="social__media">
             <div class="social__media--wrap">
+            <a href="https://www.facebook.com/" target="blank" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/home" target="blank" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/" target="blank" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/" target="blank" class="fa fa-instagram"></a>
                 <div class="footer__logo">
                     <a href="/" id="footer__logo">SHOP NAME</a>
                 </div>
