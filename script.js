@@ -1,3 +1,4 @@
+// Add products to cart
 document.addEventListener("DOMContentLoaded", function() {
     var addToCartButtons = document.querySelectorAll(".add-to-cart");
 
@@ -14,7 +15,31 @@ document.addEventListener("DOMContentLoaded", function() {
                     document.getElementById("cart-content").innerHTML = xhr.responseText;
                 }
             };
-            xhr.send("productName=" + productName + "&price=" + price);
+            xhr.send("productName=" + encodeURIComponent(productName) + "&price=" + encodeURIComponent(price));
         });
+    });
+
+    // Cart content display
+    const cartButton = document.querySelector('.button');
+    const cartContent = document.getElementById('cart-content');
+
+    cartButton.addEventListener('mouseenter', () => {
+        cartContent.style.display = 'block';
+    });
+
+    cartButton.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!cartContent.matches(':hover')) {
+                cartContent.style.display = 'none';
+            }
+        }, 300);
+    });
+
+    cartContent.addEventListener('mouseenter', () => {
+        cartContent.style.display = 'block';
+    });
+
+    cartContent.addEventListener('mouseleave', () => {
+        cartContent.style.display = 'none';
     });
 });

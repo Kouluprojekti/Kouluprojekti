@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 <script src="script.js" defer></script>
 </head>
+
 <body>
-    
 <!-- Navbar Section -->
 <nav class="navbar">
     <div class="navbar__container">
@@ -27,28 +27,32 @@
                 <a href="index.php" class="navbar__links">Shop</a>
             </li>
             <li class="navbar__item">
-                <a href="about.html" class="navbar__links">About</a>
+                <a href="about.php" class="navbar__links">About</a>
             </li>
             <li class="navbar__btn">
-                <a href="cart.html" class="button" id="cart-btn">
-                    Cart
-                </a>
+                <a href="cart.html" class="button" id="cart-btn">Cart</a>
                 <div id="cart-content">
                     <!-- Cart content here -->
                     <h1>CART</h1>
                     <?php
+                    session_start();
                     // Check if there are items in the session cart
-                    if(isset($_SESSION["cart"]) && !empty($_SESSION["cart"])) {
-                        // Loop through each item in the cart and display its name and price
-                        foreach($_SESSION["cart"] as $item) {
-                            echo "<p>{$item['name']} - {$item['price']}</p>";
+                    if (isset($_SESSION["cart"]) && !empty($_SESSION["cart"])) 
+                    {
+                        // Loop through each item in the cart and display its name, price, and quantity
+                        foreach ($_SESSION["cart"] as $item) 
+                        {
+                            echo "<p>{$item['name']} - {$item['price']} x{$item['quantity']}</p>";
                         }
-                    } else {
+                        // Display the "Clear Cart" button if the cart is not empty
+                        echo '<button type="button" id="clear-cart"><a href="clearCart.php">Clear Cart</a></button>';
+                    } 
+                    else 
+                    {
                         // If the cart is empty, display a message
                         echo "<p>Your cart is empty</p>";
                     }
                     ?>
-                    <!-- TO CLEAR CART SESSION PUT THIS LINK TO ANY BUTTON: <a href="clearCart.php">Clear Cart</a> -->
                 </div>
             </li>
         </ul>
@@ -81,17 +85,17 @@
             <div class="products__card">
                 <h2>Product 2</h2>
                 <p>xxx$</p>
-                <button>Add to cart</button>
+                <button class="add-to-cart" data-product="Product 2" data-price="30$">Add to Cart</button>
             </div>
             <div class="products__card">
                 <h2>Product 3</h2>
                 <p>xxx$</p>
-                <button>Add to cart</button>
+                <button class="add-to-cart" data-product="Product 3" data-price="25$">Add to Cart</button>
             </div>
             <div class="products__card">
                 <h2>Product 4</h2>
                 <p>xxx$</p>
-                <button>Add to cart</button>
+                <button class="add-to-cart" data-product="Product 4" data-price="58$">Add to Cart</button>
             </div>
         </div>
     </div>

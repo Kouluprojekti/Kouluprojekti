@@ -1,31 +1,44 @@
 <?php
-// Start the session
 session_start();
 
-// Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get product name and price from form
-    $productName = $_POST["productName"];
-    $price = $_POST["price"];
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+    $productName = $_POST['productName'];
+    $price = $_POST['price'];
 
-    // Create an array to store product information
-    $product = array(
-        "name" => $productName,
-        "price" => $price
-    );
+    if (!isset($_SESSION['cart'])) 
+    {
+        $_SESSION['cart'] = [];
+    }
 
-    // Add the product to the session cart
-    $_SESSION["cart"][] = $product;
+    // Check if the product already exists in the cart
+    if (isset($_SESSION['cart'][$productName])) {
+        // Increment the quantity
+        $_SESSION['cart'][$productName]['quantity'] += 1;
+    } else {
+        // Add new product to the cart with quantity 1
+        $_SESSION['cart'][$productName] = [
+            'name' => $productName,
+            'price' => $price,
+            'quantity' => 1
+        ];
+    }
 
-    // Output the updated cart content
+    // Generate the updated cart content
+    ob_start();
     if (!empty($_SESSION["cart"])) {
         foreach ($_SESSION["cart"] as $item) {
-            echo "<p>{$item['name']} - {$item['price']}</p>";
+            echo "<p>{$item['name']} - {$item['price']} x{$item['quantity']}</p>";
         }
+        echo '<button type="button" id="clear-cart"><a href="clearCart.php">Clear Cart</a></button>';
     } else {
         echo "<p>Your cart is empty</p>";
     }
+    $cartContent = ob_get_clean();
+
+    echo $cartContent;
 }
 ?>
+
 
 
