@@ -60,7 +60,6 @@
                             <div>
                                 <p>{$item['name']}</p>
                                 <small>Price: {$item['price']}</small><br>
-                                <a href=\"/\">Remove</a>
                             </div>
                         </div>
                     </td>
