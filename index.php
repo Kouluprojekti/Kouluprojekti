@@ -30,7 +30,7 @@
                 <a href="about.php" class="navbar__links">About</a>
             </li>
             <li class="navbar__btn">
-                <a href="cart.html" class="button" id="cart-btn">Cart</a>
+                <a href="cart.php" class="button" id="cart-btn">Cart</a>
                 <div id="cart-content">
                     <!-- Cart content here -->
                     <h1>CART</h1>
