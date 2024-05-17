@@ -1,17 +1,21 @@
-// Add products to cart
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() 
+{
     var addToCartButtons = document.querySelectorAll(".add-to-cart");
 
-    addToCartButtons.forEach(function(button) {
-        button.addEventListener("click", function() {
+    addToCartButtons.forEach(function(button) 
+    {
+        button.addEventListener("click", function() 
+        {
             var productName = button.getAttribute("data-product");
             var price = button.getAttribute("data-price");
 
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "addToCart.php", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState == 4 && xhr.status == 200) {
+            xhr.onreadystatechange = function() 
+            {
+                if (xhr.readyState == 4 && xhr.status == 200) 
+                {
                     document.getElementById("cart-content").innerHTML = xhr.responseText;
                 }
             };
@@ -41,5 +45,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     cartContent.addEventListener('mouseleave', () => {
         cartContent.style.display = 'none';
+    });
+
+    // Checkout button
+    document.addEventListener('click', function(event) 
+    {
+        if (event.target.closest('#checkout a')) 
+        {
+            window.location.href = 'cart.php';
+        }
     });
 });

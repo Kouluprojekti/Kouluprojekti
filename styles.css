@@ -266,6 +266,49 @@ th:last-child{
     width: 100%;
 }
 
+.buttonContainer {
+    display: flex;
+    justify-content: space-between; /* Aligns buttons at each end */
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.clearCartButton {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid red; 
+    outline: none;
+    border-radius: 4px;
+    background: #fff; 
+    color: #000; 
+    cursor: pointer;
+}
+
+.clearCartButton:hover {
+    background: #eee; 
+}
+
+.checkoutButton {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: rgb(220, 60, 60);
+    color: #fff;
+    cursor: pointer;
+}
+
+.checkoutButton:hover {
+    background: #cc3333;
+}
+
+.clearCartButton a,
+.checkoutButton a {
+    text-decoration: none; /* Remove underline from text */
+    color: inherit; /* Inherit color from parent */
+}
+
 #cart-content {
     display: none;
     position: absolute;

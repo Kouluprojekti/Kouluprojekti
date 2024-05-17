@@ -44,8 +44,11 @@
                         {
                             echo "<p>{$item['name']} - {$item['price']} x{$item['quantity']}</p>";
                         }
-                        // Display the "Clear Cart" button if the cart is not empty
-                        echo '<button type="button" id="clear-cart"><a href="clearCart.php">Clear Cart</a></button>';
+                        // Display Clear cart and Checkout buttons
+                        echo '<div class="buttonContainer">
+                                <button type="button" class="clearCartButton"><a href="clearCart.php">Clear Cart</a></button>
+                                <button type="button" class="checkoutButton"><a href="cart.php">Checkout</a></button>
+                            </div>';
                     } 
                     else 
                     {
