@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-<script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -42,12 +42,12 @@
                         // Loop through each item in the cart and display its name, price, and quantity
                         foreach ($_SESSION["cart"] as $item) 
                         {
-                            echo "<p>{$item['name']} - {$item['price']} x{$item['quantity']}</p>";
+                            echo "<p>{$item['name']} - {$item['price']} x{$item['quantity']} <a href='#' class='remove-from-cart' data-product='{$item['name']}'>Remove</a></p>";
                         }
                         // Display Clear cart and Checkout buttons
                         echo '<div class="buttonContainer">
-                                <button type="button" class="clearCartButton"><a href="clearCart.php">Clear Cart</a></button>
-                                <button type="button" class="checkoutButton"><a href="cart.php">Checkout</a></button>
+                                <button type="button" class="clearCartButton" onclick="location.href=\'clearCart.php\'">Clear Cart</button>
+                                <button type="button" class="checkoutButton" onclick="location.href=\'cart.php\'">Checkout</button>
                             </div>';
                     } 
                     else 
@@ -62,7 +62,7 @@
     </div>
 </nav>
 
-<!--About Section-->
+<!-- About Section -->
 <div class="about__container" id="about">
     <h1>About Us</h1>
     <div class="about__content">
@@ -80,15 +80,13 @@
 </div>
 
 <!-- Footer Section -->
-
 <div class="footer__container">
-        
     <div class="social__media">
         <div class="social__media--wrap">
-        <a href="https://www.facebook.com/" target="blank" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/home" target="blank" class="fa fa-twitter"></a>
-        <a href="https://www.youtube.com/" target="blank" class="fa fa-youtube"></a>
-        <a href="https://www.instagram.com/" target="blank" class="fa fa-instagram"></a>
+            <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/home" target="_blank" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
             <div class="footer__logo">
                 <a href="/" id="footer__logo">SHOP NAME</a>
             </div>

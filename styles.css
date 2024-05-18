@@ -305,8 +305,19 @@ th:last-child{
 
 .clearCartButton a,
 .checkoutButton a {
-    text-decoration: none; /* Remove underline from text */
+    text-decoration: none; 
     color: inherit; /* Inherit color from parent */
+}
+
+.remove-from-cart {
+    color: blue;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.remove-from-cart:hover {
+    text-decoration: none;
+    color: darkblue;
 }
 
 #cart-content {
@@ -916,4 +927,3 @@ th:last-child{
         height: 140vh;
     }
 }
-
