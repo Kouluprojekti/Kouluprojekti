@@ -66,6 +66,11 @@ td a{
     text-decoration: none;
 }
 
+a.remove-from-cart {
+    color: #cc3333;
+}
+
+
 td img {
     margin-right: 10px;
 }
