@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="script.js" defer></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -61,14 +62,14 @@
                     <div class=\"cart_info\">
                         <img src=\"laptop_build.webp\" style=\"width: 200px; height: auto;\">
                         <div>
-                            <p>{$item['name']}</p>
-                            <small>Price: {$item['price']}</small><br>
-                            <a href=\"/\">Remove</a>
+                            <p>" . htmlspecialchars($item['name']) . "</p>
+                            <small>Price: " . htmlspecialchars($item['price']) . "</small><br>
+                            <a href='#' class=\"remove-from-cart\" data-product=\"" . htmlspecialchars($item['name']) . "\">Remove</a>
                         </div>
                     </div>
                 </td>
-                <td>{$item['quantity']}</td>
-                <td>{$item['price']}</td>
+                <td>" . htmlspecialchars($item['quantity']) . "</td>
+                <td>" . htmlspecialchars($item['price']) . "</td>
             </tr>";
             $totalPrice += $item['price'] * $item['quantity'];
     }
@@ -113,7 +114,7 @@
             <p>Go back to the store and add items to your shopping cart. Your shopping cart will be waiting here until you\'re ready to order.</p>
             <li class="cartButton">
                 <a href="index.php" class="button">
-                    Return to the store
+                    Back to store
                 </a>
         </div>
         </div>';
