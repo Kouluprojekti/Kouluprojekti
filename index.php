@@ -42,7 +42,7 @@
                         // Loop through each item in the cart and display its name, price, and quantity
                         foreach ($_SESSION["cart"] as $item) 
                         {
-                            echo "<p>{$item['name']} - {$item['price']} x{$item['quantity']} <a href='#' class='remove-from-cart' data-product='{$item['name']}'>Remove</a></p>";
+                            echo "<p>{$item['name']} - {$item['price']} x {$item['quantity']} <a href='#' class='remove-from-cart' data-product='{$item['name']}'>Remove</a></p>";
                         }
                         // Display Clear cart and Checkout buttons
                         echo '<div class="buttonContainer">
