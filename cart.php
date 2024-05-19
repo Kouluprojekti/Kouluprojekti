@@ -64,7 +64,7 @@
                         <div>
                             <p>" . htmlspecialchars($item['name']) . "</p>
                             <small>Price: " . htmlspecialchars($item['price']) . "</small><br>
-                            <a href='#' class=\"remove-from-cart\" data-product=\"" . htmlspecialchars($item['name']) . "\">Remove</a>
+                            <a href=\"#\" class=\"remove-from-cart\" data-product=\"" . htmlspecialchars($item['name']) . "\" onclick=\"location.reload()\">Remove</a>
                         </div>
                     </div>
                 </td>
