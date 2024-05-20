@@ -106,7 +106,7 @@
                     <button class=\"cart__btn\" id=\"clear-cart\" onclick=\"window.location.href='clearCart.php';\">
                         Clear Cart
                     </button>
-                    <button class=\"cart__btn\" onclick=\"window.location.href='receipt.php';\">
+                    <button class=\"cart__btn\" onclick=\"window.location.href='checkout.php';\">
                         Checkout
                     </button>
                 </div>
