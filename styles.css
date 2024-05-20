@@ -66,6 +66,10 @@ td a{
     text-decoration: none;
 }
 
+a.remove-from-cart{
+    color: #cc3333;
+}
+
 td img {
     margin-right: 10px;
 }
@@ -187,14 +191,16 @@ th:last-child{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 250px;
     padding: 10px 20px;
-    position: relative;
+    position: absolute;
     left: 35%;
 }
 
 @media screen and (max-width: 600px){
-   
+   .cartButton {
+    left: 15%;
+   }
 }
 
  /* Navbar */
@@ -717,7 +723,7 @@ th:last-child{
 
 @media screen and (max-width: 870px) {
     .products {
-        height: 2500px;
+        height: 2600px;
     }
 }
 
