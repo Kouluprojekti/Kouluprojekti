@@ -201,7 +201,6 @@ th:last-child{
 
 /* Checkout Page */
 .product-details {
-    border: 3px solid yellow;
     margin-bottom: 10px;
     display: flex;
     justify-content: flex-end;
@@ -221,14 +220,12 @@ th:last-child{
 
 .checkout_container {
     min-height: 60vh;
-    border: 3px solid green;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .contact_info {
-    border: 3px solid pink;
     width: 40%;
     margin-left: 15%; 
     padding: 50px; 
@@ -262,7 +259,6 @@ th:last-child{
 }
 
 .total_priceCheckout {
-    border: 3px solid blue;
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -277,7 +273,6 @@ th:last-child{
 
 .checkout_page {
     margin: 80px auto;
-    border: 3px solid orange;
     width: 30%;
     margin-right: 15px;
 }
