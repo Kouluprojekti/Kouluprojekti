@@ -91,10 +91,11 @@
             </div>
             <div class=\"button_container\">
             <button class=\"cart__btn\" onclick=\"window.location.href='index.php';\">
-        To Home Screen
-    </button>
+                To Home Screen
+            </button>
             </div>
             </div>";
+        unset($_SESSION["cart"]);
         ?>
    </div>
 

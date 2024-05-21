@@ -8,4 +8,3 @@ session_destroy();
 // Redirect to the same page or wherever you want
 header("Location: ".$_SERVER['HTTP_REFERER']);
 exit();
-?>
