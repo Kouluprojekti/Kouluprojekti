@@ -752,11 +752,8 @@ th:last-child{
     height: 525px;
     width: 400px;
     border-radius: 4px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17, 17,
-    17, 0.6) 100%);
     background-size: cover;
     position: relative;
-    color: #000;
 }
 
 
@@ -764,12 +761,16 @@ th:last-child{
     position: absolute;
     top: 350px;
     left: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 5px #222528;
 }
 
 .products__card p {
     position: absolute;
     top: 400px;
     left: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 5px #222528;
 }
 
 .products__card button {

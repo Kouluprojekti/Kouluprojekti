@@ -80,22 +80,22 @@
 <div class="products" id="shop">
     <h1>Our Products</h1>
     <div class="products__container">
-        <div class="products__card">
+        <div class="products__card" style="background-image: url('laptop_build.webp');">
             <h2>Product 1</h2>
             <p>xxx$</p>
             <button class="add-to-cart" data-product="Product 1" data-price="10$">Add to Cart</button>
         </div>
-        <div class="products__card">
+        <div class="products__card" style="background-image: url('laptop_build.webp');">
             <h2>Product 2</h2>
             <p>xxx$</p>
             <button class="add-to-cart" data-product="Product 2" data-price="30$">Add to Cart</button>
         </div>
-        <div class="products__card">
+        <div class="products__card" style="background-image: url('laptop_build.webp');">
             <h2>Product 3</h2>
             <p>xxx$</p>
             <button class="add-to-cart" data-product="Product 3" data-price="25$">Add to Cart</button>
         </div>
-        <div class="products__card">
+        <div class="products__card" style="background-image: url('laptop_build.webp');">
             <h2>Product 4</h2>
             <p>xxx$</p>
             <button class="add-to-cart" data-product="Product 4" data-price="58$">Add to Cart</button>
