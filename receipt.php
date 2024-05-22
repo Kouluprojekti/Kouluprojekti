@@ -66,7 +66,11 @@
                     <td>{$item['quantity']}</td>
                     <td>{$item['price']}</td>
                 </tr>";
-                $totalPrice += $item['price'] * $item['quantity'];
+                // Remove the dollar sign from the price and ensure price and quantity are numeric before calculation
+                $itemPrice = is_numeric(str_replace('$', '', $item['price'])) ? floatval(str_replace('$', '', $item['price'])) : 0;
+                $itemQuantity = is_numeric($item['quantity']) ? intval($item['quantity']) : 0;
+                
+                $totalPrice += $itemPrice * $itemQuantity;
         }
         $taxlessPrice1 = $totalPrice * 0.76;
         $taxlessPrice2 = number_format($taxlessPrice1, 2);
