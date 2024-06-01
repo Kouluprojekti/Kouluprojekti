@@ -40,6 +40,19 @@
     <?php
     session_start();
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $_SESSION["contact_info"] = [
+            "first_name" => $_POST["first_name"],
+            "last_name" => $_POST["last_name"],
+            "address" => $_POST["address"],
+            "city" => $_POST["city"],
+            "phone" => $_POST["phone"],
+            "email" => $_POST["email"]
+        ];
+        header("Location: receipt.php");
+        exit;
+    }
+
     function calculateTotals($cart) 
     {
         $totalPrice = 0;
@@ -59,42 +72,44 @@
         list($taxlessPrice, $tax, $totalPrice) = calculateTotals($_SESSION["cart"]);
         echo "<div class=\"checkout_container\">";
             echo "<div class=\"contact_info\">";
-                //Contact Information
+                echo "<form method='post' action='checkout.php'>";
+                // Contact Information
                 echo "<h2>Ship To</h2>";
                 echo "<div class='input_row'>";
                     echo "<div class='input_group'>";
                         echo "<label for='first_name'>First Name:</label>";
-                        echo "<input type='text' id='first_name' name='first_name' required>";
+                        echo "<input type='text' id='first_name' name='first_name' value='" . (isset($_SESSION["contact_info"]["first_name"]) ? htmlspecialchars($_SESSION["contact_info"]["first_name"]) : "") . "' required>";
                     echo "</div>";
                     echo "<div class='input_group'>";
                         echo "<label for='last_name'>Last Name:</label>";
-                        echo "<input type='text' id='last_name' name='last_name' required>";
+                        echo "<input type='text' id='last_name' name='last_name' value='" . (isset($_SESSION["contact_info"]["last_name"]) ? htmlspecialchars($_SESSION["contact_info"]["last_name"]) : "") . "' required>";
                     echo "</div>";
                 echo "</div>";
                 echo "<div class='input_row'>";
                     echo "<div class='input_group'>";
                         echo "<label for='address'>Address:</label>";
-                        echo "<input type='text' id='address' name='address' required>";
+                        echo "<input type='text' id='address' name='address' value='" . (isset($_SESSION["contact_info"]["address"]) ? htmlspecialchars($_SESSION["contact_info"]["address"]) : "") . "' required>";
                     echo "</div>";
                     echo "<div class='input_group'>";
                         echo "<label for='city'>City:</label>";
-                        echo "<input type='text' id='city' name='city' required>";
+                        echo "<input type='text' id='city' name='city' value='" . (isset($_SESSION["contact_info"]["city"]) ? htmlspecialchars($_SESSION["contact_info"]["city"]) : "") . "' required>";
                     echo "</div>";
                 echo "</div>";
                 echo "<div class='input_row'>";
                     echo "<div class='input_group'>";
                         echo "<label for='phone'>Phone Number:</label>";
-                        echo "<input type='tel' id='phone' name='phone' required>";
+                        echo "<input type='tel' id='phone' name='phone' value='" . (isset($_SESSION["contact_info"]["phone"]) ? htmlspecialchars($_SESSION["contact_info"]["phone"]) : "") . "' required>";
                     echo "</div>";
                     echo "<div class='input_group'>";
                         echo "<label for='email'>Email:</label>";
-                        echo "<input type='email' id='email' name='email' required>";
+                        echo "<input type='email' id='email' name='email' value='" . (isset($_SESSION["contact_info"]["email"]) ? htmlspecialchars($_SESSION["contact_info"]["email"]) : "") . "' required>";
                     echo "</div>";
                 echo "</div>";
                 echo "<div class=\"button_container\">";
-                    echo "<button class=\"cart__btn button_disabled\" id=\"continue_button\" onclick=\"window.location.href='receipt.php';\" disabled>";
+                    echo "<button class=\"cart__btn button_disabled\" id=\"continue_button\" type='submit' disabled>";
                         echo "Continue";
                     echo "</button>";
+                echo "</form>";
                 echo "</div>";
             echo "</div>";
             echo "<div class=\"checkout_page\">";

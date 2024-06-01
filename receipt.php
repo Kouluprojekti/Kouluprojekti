@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<div>
+<body>
     <!-- Navbar Section -->
     <nav class="navbar">
         <div class="navbar__container">
@@ -22,19 +22,13 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a href="index.php" class="navbar__links">
-                        Shop
-                    </a>
+                    <a href="index.php" class="navbar__links">Shop</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="about.php" class="navbar__links">
-                        About
-                    </a>
+                    <a href="about.php" class="navbar__links">About</a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="cart.php" class="button">
-                        Cart
-                    </a>
+                    <a href="cart.php" class="button">Cart</a>
                 </li>
             </ul>
         </div>
@@ -44,6 +38,10 @@
     <div class="receipt_container">
     <?php
         session_start();
+
+        // Retrieve contact information from the session
+        $contact_info = isset($_SESSION["contact_info"]) ? $_SESSION["contact_info"] : [];
+
         echo "<div class=\"small_container cart_page\">
                 <table>
                     <tr>
@@ -81,15 +79,44 @@
                 <table>
                     <tr>
                         <td>Taxless</td>
-                        <td>$taxlessPrice2$</td>
+                        <td>\$$taxlessPrice2</td>
                     </tr>
                     <tr>
                         <td>Tax</td>
-                        <td>$tax2$</td>
+                        <td>\$$tax2</td>
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td>$totalPrice$</td>
+                        <td>\$$totalPrice</td>
+                    </tr>
+                    <tr><td colspan='2'><hr></td></tr>
+                    <tr>
+                        <td colspan='1'><strong>Shipping To</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>First Name</td>
+                        <td>{$contact_info['first_name']}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>{$contact_info['last_name']}</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>{$contact_info['address']}</td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td>{$contact_info['city']}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number</td>
+                        <td>{$contact_info['phone']}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{$contact_info['email']}</td>
                     </tr>
                 </table>
             </div>
@@ -100,24 +127,25 @@
             </div>
             </div>";
         unset($_SESSION["cart"]);
+        unset($_SESSION["contact_info"]);
         ?>
    </div>
 
 <!--Footer Section-->
 <div class="footer__container">
     <div class="social__media">
-                <div class="social__media--wrap">
-                <a href="https://www.facebook.com/" target="blank" class="fa fa-facebook"></a>
-                <a href="https://twitter.com/home" target="blank" class="fa fa-twitter"></a>
-                <a href="https://www.youtube.com/" target="blank" class="fa fa-youtube"></a>
-                <a href="https://www.instagram.com/" target="blank" class="fa fa-instagram"></a>
-                    <div class="footer__logo">
-                        <a href="/" id="footer__logo">SHOP NAME</a>
-                    </div>
-                    <p class="website__rights">© SHOP NAME 2024. All rights reserved</p>
-                </div>
+        <div class="social__media--wrap">
+            <a href="https://www.facebook.com/" target="blank" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/home" target="blank" class="fa fa-twitter"></a>
+            <a href="https://www.youtube.com/" target="blank" class="fa fa-youtube"></a>
+            <a href="https://www.instagram.com/" target="blank" class="fa fa-instagram"></a>
+            <div class="footer__logo">
+                <a href="/" id="footer__logo">SHOP NAME</a>
             </div>
+            <p class="website__rights">© SHOP NAME 2024. All rights reserved</p>
         </div>
+    </div>
+</div>
 
     <script src="app.js"></script>
 </body>
