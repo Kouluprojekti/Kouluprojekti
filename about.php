@@ -74,7 +74,10 @@
                 
             Whether you're looking for a budget-friendly laptop for work or play, a powerful gaming console, or a reliable home appliance, [Company Name] has you covered. Our commitment to quality, affordability, and sustainability sets us apart in the refurbished electronics market.
                 
-            Join us in our journey to redefine the way people think about refurbished electronics. Experience the difference with [Company Name] - where quality meets sustainability.</p>
+            Join us in our journey to redefine the way people think about refurbished electronics. Experience the difference with [Company Name] - where quality meets sustainability.
+        
+            <br><br>If you have any questions, contact our team at: 
+            <br><strong>company.name@gmail.com</strong></p>
         <div class="about__card"></div>
     </div>
 </div>
