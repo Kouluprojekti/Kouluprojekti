@@ -67,11 +67,11 @@
     <div class="main__container">
         <div class="main__content">
             <h2>Highest Quality Refurbished Electronics.</h2>
-            <p>-20% off, only until xx.xx.xxxx!</p>
-            <button class="main__btn" onclick="window.location.href='#shop'">Shop Now</button>
+            <p>Browse our Selection below.</p>
+            <button class="main__btn" id="shopBtn">Shop Now</button>
         </div>
         <div class="main__img--container">
-            <img src="pic1.svg" alt="Discount sign, Sale" id="main__img">
+            <img src="pic2.svg" alt="Devices, Phone, Tablet, Screen" id="main__img">
         </div>
     </div>
 </div>
@@ -123,6 +123,11 @@
         </div>
     </div>
 </div>
+<script>
+    document.getElementById('shopBtn').addEventListener('click', function() {
+        document.getElementById('shop').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
 <script src="app.js"></script>
 </body>
 </html>
