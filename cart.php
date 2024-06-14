@@ -138,7 +138,7 @@
                 <a href="https://www.youtube.com/" target="blank" class="fa fa-youtube"></a>
                 <a href="https://www.instagram.com/" target="blank" class="fa fa-instagram"></a>
                 <div class="footer__logo">
-                    <a href="/" id="footer__logo">SHOP NAME</a>
+                    <a href="index.php" id="footer__logo">SHOP NAME</a>
                 </div>
                 <p class="website__rights">© SHOP NAME 2024. All rights reserved</p>
             </div>
