@@ -847,7 +847,7 @@ th:last-child{
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
-    margin-left: 80px;
+    margin-left: 50px;
     margin-right: 80px;
 }
 
@@ -919,6 +919,7 @@ th:last-child{
   .fa-instagram {
     background: none;
     color: white;
+
   }
 
 .social__icon--link {
@@ -942,6 +943,12 @@ th:last-child{
 
 .website__rights {
     color: #fff;
+}
+
+@media screen and (max-width: 820px) {
+    #footer__logo{
+        margin-left: 80px;
+    }
 }
 
 @media screen and (max-width: 820px) {
