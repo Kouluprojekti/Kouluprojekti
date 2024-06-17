@@ -66,18 +66,18 @@
 <div class="about__container" id="about">
     <h1>About Us</h1>
     <div class="about__content">
-        <p>Welcome to [Company Name], where we breathe new life into pre-loved electronic devices, giving them a second chance to shine. At [Company Name], we specialize in refurbishing a wide range of electronics, from laptops and desktops to gaming consoles and home appliances. <br><br>
+        <p>Welcome to i7 Restorations, where we breathe new life into pre-loved electronic devices, giving them a second chance to shine. At i7 Restorations, we specialize in refurbishing a wide range of electronics, from laptops and desktops to gaming consoles and home appliances. <br><br>
 
             Our mission is simple: to provide high-quality refurbished electronics that not only meet but exceed our customers' expectations. We believe in sustainability and the power of giving products a second life, reducing electronic waste and minimizing our environmental footprint.<br><br>
                 
             With a dedicated team of experts, we meticulously refurbish each device to ensure it not only looks brand new but also performs flawlessly. From thorough inspections to component replacements and software updates, every step is taken to deliver a product that's as good as new.<br><br>
                 
-            Whether you're looking for a budget-friendly laptop for work or play, a powerful gaming console, or a reliable home appliance, [Company Name] has you covered. Our commitment to quality, affordability, and sustainability sets us apart in the refurbished electronics market.
+            Whether you're looking for a budget-friendly laptop for work or play, a powerful gaming console, or a reliable home appliance, i7 Restorations has you covered. Our commitment to quality, affordability, and sustainability sets us apart in the refurbished electronics market.
                 
-            Join us in our journey to redefine the way people think about refurbished electronics. Experience the difference with [Company Name] - where quality meets sustainability.
+            Join us in our journey to redefine the way people think about refurbished electronics. Experience the difference with i7 Restorations - where quality meets sustainability.
         
             <br><br>If you have any questions, contact our team at: 
-            <br><strong>company.name@gmail.com</strong></p>
+            <br><strong>i7restorations.info@gmail.com</strong></p>
         <div class="about__card"></div>
     </div>
 </div>
@@ -91,9 +91,9 @@
             <a href="https://www.youtube.com/" target="_blank" class="fa fa-youtube"></a>
             <a href="https://www.instagram.com/" target="_blank" class="fa fa-instagram"></a>
             <div class="footer__logo">
-                <a href="index.php" id="footer__logo">SHOP NAME</a>
+                <a href="index.php" id="footer__logo">i7 Restorations</a>
             </div>
-            <p class="website__rights">© SHOP NAME 2024. All rights reserved</p>
+            <p class="website__rights">© i7 Restorations 2024. All rights reserved</p>
         </div>
     </div>
 </div>

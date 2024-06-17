@@ -16,7 +16,7 @@
 <!-- Navbar Section -->
 <nav class="navbar">
     <div class="navbar__container">
-        <a href="index.php" id="navbar__logo">Shop Name</a>
+        <a href="index.php" id="navbar__logo">i7 Restorations</a>
         <div class="navbar__toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -119,9 +119,9 @@
             <a href="https://www.youtube.com/" target="blank" class="fa fa-youtube"></a>
             <a href="https://www.instagram.com/" target="blank" class="fa fa-instagram"></a>
             <div class="footer__logo">
-                <a href="index.php" id="footer__logo">SHOP NAME</a>
+                <a href="index.php" id="footer__logo">i7 Restorations</a>
             </div>
-            <p class="website__rights">© SHOP NAME 2024. All rights reserved</p>
+            <p class="website__rights">© i7 Restorations 2024. All rights reserved</p>
         </div>
     </div>
 </div>
