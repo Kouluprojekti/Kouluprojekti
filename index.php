@@ -62,7 +62,7 @@
     </div>
 </nav>
 
-<!--Hero Section-->
+<!-- Hero Section -->
 <div class="main" id="home">
     <div class="main__container">
         <div class="main__content">
@@ -76,30 +76,32 @@
     </div>
 </div>
 
-<!--Shop Section-->
+<!-- Shop Section -->
 <div class="products" id="shop">
     <h1>Our Products</h1>
     <div class="products__container">
-        <div class="products__card" style="background-image: url('laptop_build.webp');">
-            <h2>Product 1</h2>
-            <p>xxx$</p>
-            <button class="add-to-cart" data-product="Product 1" data-price="10$">Add to Cart</button>
-        </div>
-        <div class="products__card" style="background-image: url('laptop_build.webp');">
-            <h2>Product 2</h2>
-            <p>xxx$</p>
-            <button class="add-to-cart" data-product="Product 2" data-price="30$">Add to Cart</button>
-        </div>
-        <div class="products__card" style="background-image: url('laptop_build.webp');">
-            <h2>Product 3</h2>
-            <p>xxx$</p>
-            <button class="add-to-cart" data-product="Product 3" data-price="25$">Add to Cart</button>
-        </div>
-        <div class="products__card" style="background-image: url('laptop_build.webp');">
-            <h2>Product 4</h2>
-            <p>xxx$</p>
-            <button class="add-to-cart" data-product="Product 4" data-price="58$">Add to Cart</button>
-        </div>
+        <?php
+        require_once 'connect.php';
+
+        // Fetch products from the database
+        $sql = "SELECT id, name, price FROM products";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo "<div class='products__card' style='background-image: url(\"laptop_build.webp\");'>";
+                echo "<h2>" . $row["name"] . "</h2>";
+                echo "<p>$" . $row["price"] . "</p>";
+                echo "<button class='add-to-cart' data-product='" . $row["name"] . "' data-price='$" . $row["price"] . "'>Add to Cart</button>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>No products found</p>";
+        }
+
+        $conn->close();
+        ?>
     </div>
 </div>
 
