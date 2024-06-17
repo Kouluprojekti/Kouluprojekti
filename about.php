@@ -16,7 +16,7 @@
 <!-- Navbar Section -->
 <nav class="navbar">
     <div class="navbar__container">
-        <a href="index.php" id="navbar__logo">Shop Name</a>
+        <a href="index.php" id="navbar__logo">i7 Restorations</a>
         <div class="navbar__toggle" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
